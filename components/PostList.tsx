@@ -1,7 +1,12 @@
 import Link from "next/link";
+import { FC } from "react";
 import styles from "../styles/Posts.module.scss";
 
-const PostsList = ({ posts }) => {
+type PostProps = {
+  posts: { id: string | number; title: string }[];
+};
+
+const PostsList: FC<PostProps> = ({ posts }) => {
   return (
     <ul className={styles.list}>
       {posts &&

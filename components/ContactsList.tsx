@@ -1,6 +1,16 @@
 import Link from "next/link";
+import { FC } from "react";
 
-const ContactsList = ({ contacts }) => {
+type Contacts = {
+  id: string | number;
+  name: string;
+};
+
+type ListProps = {
+  contacts: Contacts[];
+};
+
+const ContactsList: FC<ListProps> = ({ contacts }) => {
   return (
     <ul>
       {contacts &&

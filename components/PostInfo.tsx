@@ -1,15 +1,20 @@
 import Heading from "./Heading";
+import { PostType } from "../type";
+import { FC } from "react";
 
-const ContactInfo = ({ post }) => {
-  const { id, title, body } = post || {};
+type ContactInfoProps = {
+  post: PostType;
+};
+
+const ContactInfo: FC<ContactInfoProps> = ({ post }) => {
+  const { title, body } = post || {};
 
   return (
     <>
       {!post ? (
-        <Heading tag="h3" text="Posts is Empty" />
+        <Heading tag={"h3"} text="Posts is Empty" />
       ) : (
         <>
-          {/* <Heading tag="h3" text={id} /> */}
           <div>
             <strong>Title </strong>
             {title}
