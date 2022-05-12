@@ -18,13 +18,13 @@ const MyApp = ({ Component, pageProps }) => {
       <main>
         <Component {...pageProps} />
       </main>
-      <Image
+      {/* <Image
         src={youtubeImg}
         width={300}
         height={300}
         alt="previews"
         placeholder="blur"
-      />
+      /> */}
     </Layout>
   );
 };

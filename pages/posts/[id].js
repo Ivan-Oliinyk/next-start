@@ -36,8 +36,6 @@ export const getStaticProps = async (context) => {
 };
 
 const Post = ({ post }) => {
-  console.log("=====", post);
-
   return (
     <>
       <Heading text={`Post: ${post.id}`} />
