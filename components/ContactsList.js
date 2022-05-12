@@ -1,10 +1,12 @@
+import Link from "next/link";
+
 const ContactsList = ({ contacts }) => {
   return (
     <ul>
       {contacts &&
-        contacts.map(({ id, name, email }) => (
+        contacts.map(({ id, name }) => (
           <li key={id}>
-            <strong>{name}</strong>({email})
+            <Link href={`/contacts/${id}`}>{name}</Link>
           </li>
         ))}
     </ul>
